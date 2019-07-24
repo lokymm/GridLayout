@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Columnas</title>
+    <title>Funciones</title>
 
 <!-- INIT   Estilos generales de la grilla -->
     <style media="screen">
@@ -13,13 +13,34 @@
           display: grid;
           /* grid-template-columns: 200px 200px 200px;
           grid-template-rows: 300px 300px; */
-          grid-template: 300px 300px / 400px 200px 200px;
+
+          /* grid-template: 300px 200px / 1fr 1fr 1fr; */
+          /* grid-template: 300px 200px / repeat(4, 1fr); */
+          grid-template: 300px 200px / repeat(4, minmax(50px,1fr));
+
+          grid-column-gap: 10px;
+          grid-row-gap: 10px;
         }
         .item{
           background: lightgreen;
           padding:5px;
           border: 1px solid grey;
         }
+        .item:nth-of-type(4){
+          background: blue;
+          overflow: auto;
+          display: grid;
+          grid-template: 50px 50px / 100px 150px 200px;
+          grid-column-gap: 10px;
+          grid-row-gap: 10px;
+
+        }
+        .subitem{
+          background: lightgreen;
+          padding:5px;
+          border: 1px solid grey;
+        }
+
     </style>
                <!-- END   Estilos generales de la grilla -->
     <!--  Comienzo de la grilla-->
@@ -29,7 +50,12 @@
     <div class="item">contenido #1</div>
     <div class="item">contenido #2</div>
     <div class="item">contenido #3</div>
-    <div class="item">contenido #4</div>
+    <div class="item">
+      <div class="subitem">contenido #1</div>
+      <div class="subitem">contenido #2</div>
+      <div class="subitem">contenido #3</div>
+      <div class="subitem">contenido #4</div>
+    </div>
     <div class="item">contenido #5</div>
     <div class="item">contenido #6</div>
     <div class="item">contenido #7</div>

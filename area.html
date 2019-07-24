@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Areas</title>
+
+<!-- INIT   Estilos generales de la grilla -->
+    <style media="screen">
+      body{
+        font-family: Arial;
+      }
+        .container{
+          display: grid;
+          /* grid-template-columns: 200px 200px 200px;
+          grid-template-rows: 300px 300px; */
+
+          /* grid-template: 300px 200px / 1fr 1fr 1fr; */
+          /* grid-template: 300px 200px / repeat(4, 1fr); */
+          grid-template: 120px 1fr 150px / 200px 1fr;
+
+          /* grid-column-gap: 10px;*/
+          grid-gap: 10px;
+          height: 100vh;
+
+          grid-template-areas:"header header"
+                              "nav content"
+                              "footer footer"
+
+        }
+
+        .item{
+          background: lightgreen;
+          padding:5px;
+          border: 1px solid grey;
+          /* border-radius: 10%; */
+        }
+        /* .item:nth-of-type(4){
+          background: blue;
+          overflow: auto;
+          display: grid;
+          grid-template: 50px 50px / 100px 150px 200px;
+          grid-column-gap: 10px;
+          grid-row-gap: 10px;
+
+        }
+        .subitem{
+          background: lightgreen;
+          padding:5px;
+          border: 1px solid grey;
+        } */
+
+.header{
+  grid-area: header;
+  background: lightblue;
+}
+
+.nav{
+  grid-area: nav;
+}
+
+.content{
+  grid-area: content;
+}
+
+.footer{
+  grid-area: footer;
+  background: grey;
+}
+
+
+    </style>
+               <!-- END   Estilos generales de la grilla -->
+
+    <!--  Comienzo de la grilla-->
+  </head>
+  <body>
+   <section class="container">
+    <div class="item header">header</div>
+    <div class="item nav">nav</div>
+    <div class="item content">content</div>
+    <div class="item footer">footer</div>
+
+   </section>
+  </body>
+</html>
