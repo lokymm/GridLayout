@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Areas</title>
+    <title>Nombrar Lineas</title>
 
 <!-- INIT   Estilos generales de la grilla -->
     <style media="screen">
@@ -14,17 +14,13 @@
           /* grid-template-columns: 200px 200px 200px;
           grid-template-rows: 300px 300px; */
 
-          /* grid-template: 300px 200px / 1fr 1fr 1fr; */
-          /* grid-template: 300px 200px / repeat(4, 1fr); */
-          grid-template: repeat(3, 1fr)  / repeat(4, 1fr);
+          grid-template-columns: repeat(7, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          /* grid-template: repeat(3, 1fr)  / repeat(7, 1fr); */
 
           /* grid-column-gap: 10px;*/
-          grid-gap: 10px;
+          grid-gap: 5px;
           height: 100vh;
-
-          /* grid-template-areas:"header header"
-                              "nav content"
-                              "footer footer" */
 
         }
 
@@ -32,31 +28,26 @@
           background: lightgreen;
           padding:5px;
           border: 1px solid grey;
-          /* border-radius: 10%; */
+
         }
 
         .item:nth-of-type(1){
           background: grey;
-          grid-column-start: 1;
-          grid-column-end: 3;
+          grid-column: 1 / span 3;
+          grid-row: 1 / span 2;
         }
 
-        .item:nth-of-type(6){
-          background: green;
-          grid-column-start: 3;
-          grid-column-end: 5;
+        .item:nth-of-type(2){
+          background: blue;
+          grid-column: 4 / span 2;
+          grid-row: 1 / span 2;
         }
 
-
-        .item:nth-of-type(4){
-          background: yellow;
-          grid-row: 2 / span 2 ;
-        }
-
-        .item:nth-of-type(8){
+        .item:nth-of-type(3){
           background: red;
-          grid-column: 3 / span 2 ;
+          grid-column: 6 / span 2;
         }
+
 
 
 
@@ -73,12 +64,10 @@
     <div class="item content">content</div>
     <div class="item footer">footer</div>
     <div class="item ">5</div>
-    <div class="item ">6</div>
-    <div class="item ">7</div>
-    <div class="item ">9</div>
-    <div class="item ">10</div>
-    <div class="item ">11</div>
-    <div class="item ">12</div>
+    <div class="item ">5</div>
+    <div class="item ">5</div>
+    <div class="item ">5</div>
+
 
 
    </section>
